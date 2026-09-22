@@ -1,1 +1,24 @@
-<p>auth works!</p>
+<div class="auth-container">
+  <h2>{{isLoginMode ? 'Login' : 'Cadastro'}}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    @if (!isLoginMode) {
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name">
+    }
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" formControlName="email">
+
+    <label for="password">Password:</label>
+    <input id="password" type="password" formControlName="password" [placeholder]="isLoginMode ? '' : 'Informe pelo menos 6 dígitos'">
+
+    <button type="submit">{{ isLoginMode ? 'Entrar' : 'Registrar' }}</button>
+
+  </form>
+
+  <p>
+    {{ isLoginMode ? 'Não tem conta?' : 'Já tem conta?' }}
+    <button (click)="toggleMode()">{{ isLoginMode ? 'Criar conta' : 'Fazer login' }}</button>
+  </p>
+</div>
