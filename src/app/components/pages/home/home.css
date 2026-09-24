@@ -1,0 +1,29 @@
+.carousel {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30em;
+  background: rgba(0, 0, 900,0.770);
+}
+
+.title {
+  color: #fff;
+  border-radius: 12px;
+  font-size: 3em;
+  background: rgba(0, 0, 0, 0.450);
+}
+
+.container {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-container {
+  margin: .5em;
+  padding: .9em;
+  background-color: rgba(0, 0, 0, 0.450);
+  border-radius: 12px;
+}
